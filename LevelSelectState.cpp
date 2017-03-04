@@ -24,11 +24,8 @@ void LevelSelectState::s_LevelThree()
 }
 void LevelSelectState::s_LevelFour()
 {
-	TheGame::Instance()->No();
-	/*
 	TheGame::Instance()->level = 4;
-	TheGame::Instance()->getStateMachine()->changeState(new PlayState());
-	*/
+	TheGame::Instance()->getStateMachine()->changeState(new PlayState());	
 }
 void LevelSelectState::s_LevelFive()
 {

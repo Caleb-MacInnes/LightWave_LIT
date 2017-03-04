@@ -8,6 +8,7 @@
 #include "Level_One.h"
 #include "Level_Two.h"
 #include "Level_Three.h"
+#include "Level_Four.h"
 #include "Timer.h"
 
 
@@ -26,6 +27,7 @@ public:
 	Level_One* level_one;
 	Level_Two* level_two;
 	Level_Three* level_three;
+	Level_Four* level_four;
 	Timer* p_Timer;
 
 	int screen_w = TheGame::Instance()->screen_width;

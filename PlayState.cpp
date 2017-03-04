@@ -68,7 +68,6 @@ void PlayState::update()
 			TheGame::Instance()->getStateMachine()->changeState(new ScoreState());
 		}
 	}
-	/*
 	else if (TheGame::Instance()->level == 4)
 	{
 		if (checkForWin(level_four->getWinLocation(), m_Players[0]))
@@ -76,6 +75,7 @@ void PlayState::update()
 			TheGame::Instance()->getStateMachine()->changeState(new ScoreState());
 		}
 	}
+	/*
 	else if (TheGame::Instance()->level == 5)
 	{
 		if (checkForWin(level_five->getWinLocation(), m_Players[0]))
@@ -163,8 +163,7 @@ bool PlayState::onEnter()
 		level_two->loadTextures();
 		level_two->createObjects(&m_gameObjects, &m_Platforms, &m_Hazards);
 
-		level_two->setWinLocation(1600, 1600, 300, 200);
-		//(500, 250, 100, 50, "platform"));
+		level_two->setWinLocation(600, 200, 300, 200);
 	}
 	else if (TheGame::Instance()->level == 3)
 	{
@@ -175,6 +174,14 @@ bool PlayState::onEnter()
 		level_three->setWinLocation(10500, -120, 500, 300);
 
 		//(500, 250, 100, 50, "platform"));
+	}
+	else if (TheGame::Instance()->level == 4)
+	{
+		level_four = new Level_Four();
+		level_four->loadTextures();
+		level_four->createObjects(&m_gameObjects, &m_Platforms, &m_Hazards);
+
+		level_four->setWinLocation(600, -700, 300, 100);
 	}
 
 	Player* player = new Player(new LoaderParams(500, 500, 71, 65, "player"));
